@@ -10,10 +10,10 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "IBM Plex Sans", sans-serif;
             height: 100vh;
             align-items: center;
-            color: antiquewhite;
+            color: white;
         }
 
         body::before{
@@ -36,18 +36,36 @@
             width: 100vw;
         }
 
-        .content-container {
+        .content-container, article {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             width: 70vw;
+            padding-inline: 2vw;
             background-color: violet;
             align-items: center;
         }
 
-        .content-container > *, .content-container {
-            min-width: 500px;
+        .content-container *, .content-container {
             max-width: 1000px;
+        }
+
+        .content-container img {
+            width: 70vw;
+        }
+
+        .timestamp {
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+
+        #faiq-quiet-image {
+            height: 500px;
+            width: auto;
+        }
+
+        #faiq-quiet-image:hover {
+            filter: brightness(5);
         }
 
         h1 {
@@ -62,6 +80,10 @@
             animation-iteration-count: infinite;
             background-color: #222222;
             width: calc(70vw - 365px);
+        }
+
+        article p {
+            text-align: justify;
         }
 
         @keyframes moving-header {
@@ -88,7 +110,7 @@
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kablammo:MORF@0..60&family=Tiny5&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kablammo:MORF@0..60&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -96,6 +118,15 @@
     </nav>
     <div class="content-container">
         <h1>WHERE BIRDS GO DOWN</h1>
+        <article>
+            <h2>Introduction to self.</h2>
+            <div class="timestamp">27/2/2026 5:40pm</div>
+            <p>
+                I used to have a blog years ago when I was a small human. But it got wiped, presumeable cause I was too small. So, I decided to make a new one right now! How often will I write here? We'll see. Anyways, I'm Faiq, a human that's somewhat bigger than the kid that used to have a blog. Enjoy the photo below of me asking people to be quiet.
+            </p>
+            <img id="faiq-quiet-image" src="assets/faiq_quiet.jpg" alt="Faiq telling people to be quiet">
+            <p>Put your cursor (or your finger if you're on a phone) if the photo above is too dark for ya.</p>
+        </article>
     </div>
 </body>
 </html>
