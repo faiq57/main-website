@@ -79,11 +79,12 @@ for (let article of articles) {
     let commentSubmitButton = document.createElement('button')
     commentSubmitButton.innerText = 'Submit comment'
     commentSubmitButton.onclick = async () => {
-        addNewComment(commentAuthorWriter.value, commentWriter.value, 0)
+        await addNewComment(commentAuthorWriter.value, commentWriter.value, 0)
         // *MUST BE EDITED LATER*
+        const replacementCommentSection = await createCommentCollection()
         document.getElementsByClassName('comment-collection')[0].remove()
         const commentSection = document.getElementsByClassName('comments-section')[0]
-        commentSection.appendChild(await createCommentCollection())
+        commentSection.appendChild(replacementCommentSection)
     }
     commentBox.appendChild(commentSubmitButton)
     newCommentSection.appendChild(commentBox)
