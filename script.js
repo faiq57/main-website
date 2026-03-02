@@ -37,7 +37,6 @@ const createCommentCollection = async (postId) => {
         let commentTime = document.createElement('div')
 
         const time = new Date(comment.timestamp + "Z")
-        console.log(time)
         commentTime.innerText = time.toLocaleString()
         commentMeta.appendChild(commentTime)
 
@@ -88,7 +87,8 @@ for (let post of posts) {
     // Put timestamp in
     let postTime = document.createElement('div')
     postTime.classList.add('timestamp')
-    postTime.innerText = post.timestamp
+    const time = new Date(post.timestamp + "Z")
+    postTime.innerText = time.toLocaleString()
     authorTimeLine.appendChild(postTime)
 
     article.appendChild(authorTimeLine)
@@ -100,7 +100,6 @@ for (let post of posts) {
     article.appendChild(postContent)
 
     mainContentContainer.appendChild(article)
-    console.log(post.id)
     artIds.push([article, post.id])
 }
 
