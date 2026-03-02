@@ -30,11 +30,14 @@ nav {
   height: 40px;
 }
 
+.content-container, article, .author-time-line {
+  width: 70dvw;
+}
+
 .content-container, article {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  width: 70dvw;
   padding-inline: 2dvw;
   background-color: violet;
   align-items: center;
@@ -50,9 +53,13 @@ nav {
   width: auto;
 }
 
-.timestamp {
-  align-self: flex-end;
-  margin-bottom: 10px;
+.author-time-line {
+  display: flex;
+  align-items: flex-start
+}
+
+.author-time-line > :first-child {
+  flex-grow: 1
 }
 
 #faiq-quiet-image {
