@@ -133,8 +133,9 @@ article p {
   background-color: blueviolet;
 }
 
-.comment-metadata * {
+.comment-metadata *, .author-time-line * {
   font-weight: bold;
+  font-size: 0.9rem
 }
 
 .comment-metadata > :first-child {
