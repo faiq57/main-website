@@ -20,7 +20,6 @@ const createCommentCollection = async (postId) => {
         console.log("problem")
     }
     const comments = await response.json()
-    console.log(comments)
 
     let commentCollection = document.createElement('div')
     commentCollection.classList.add('comment-collection')
@@ -67,7 +66,6 @@ const posts = await response.json()
 const artIds = []
 
 for (let post of posts) {
-    console.log(post)
     let article = document.createElement('article')
     article.id = 'article-' + post.id.toString()
 
