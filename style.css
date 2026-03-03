@@ -62,7 +62,7 @@ nav {
   flex-grow: 1
 }
 
-#faiq-quiet-image {
+.vertical-image, #faiq-quiet-image {
   max-height: 500px;
   max-width: 70dvw;
   height: auto;
@@ -71,6 +71,34 @@ nav {
 
 #faiq-quiet-image:hover {
   filter: brightness(5);
+}
+
+#lakemba-many-people-image:hover {
+  filter: sepia(0.7)
+}
+
+#camel-burger-bite-image:hover {
+  filter: invert(1);
+}
+
+#camel-burger-bitten-image:hover {
+  filter: hue-rotate(-40deg);
+}
+
+#kunafa-image:hover {
+  filter: saturate(0.5);
+}
+
+#kunafa-image {
+  border-end-end-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 1px solid white;
+}
+
+#camel-burger-bite-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid white;
 }
 
 h1 {
